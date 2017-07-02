@@ -9,7 +9,6 @@ A simple API to update to manage user details
 * surname - A users last name
 * created - The date and time the user was added
 
-
 Build tasks
 -----------
 
@@ -21,13 +20,5 @@ Postman
 
 To use the Restful API through POSTMAN first start the webserver (see Build Tasks).
 Import into postman the following files:
-# user-details.postman_environment.json
-# user-details-api.postman_collection.json
-
-
-
-
-
-
-
-
+* user-details.postman_environment.json
+* user-details-api.postman_collection.json
