@@ -1,0 +1,25 @@
+{
+  "name": "user-crud",
+  "version": "1.0.0",
+  "description": "manage user details",
+  "main": "src/public/index.js",
+  "scripts": {
+    "test": "jasmine",
+    "start": "node src/public/index.js"
+  },
+  "dependencies": {
+    "express": "4.15.3",
+    "lokijs": "^1.5.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "eslint": "4.1.1",
+    "jasmine": "2.6.0",
+    "sinon": "2.3.6"
+  },
+  "author": "d5andy",
+  "license": "ISC",
+  "engines": {
+    "node": "6.11.0"
+  }
+}

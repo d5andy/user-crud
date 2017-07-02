@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "user-details-api",
+		"_postman_id": "638d76fc-f46a-1c73-502a-44b650a1f1e9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ALL_USERS",
+			"request": {
+				"url": "{{url}}/user",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_USER",
+			"request": {
+				"url": "{{url}}/user/{{id}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_USER",
+			"request": {
+				"url": "{{url}}/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"{{email}}\",\n\t\"forename\": \"{{forename}}\",\n\t\"surname\": \"{{surname}}\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_USER",
+			"request": {
+				"url": "{{url}}/user/{{id}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"{{email}}\",\n\t\"forename\": \"{{forename}}\",\n\t\"surname\": \"{{surname}}\"\n}"
+				},
+				"description": "Change the surname, forename, email fields"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_USER",
+			"request": {
+				"url": "{{url}}/user/{{id}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "Set the id to be the users"
+			},
+			"response": []
+		}
+	]
+}
