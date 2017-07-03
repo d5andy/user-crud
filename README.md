@@ -30,7 +30,7 @@ Import into postman the following files:
 | GET_USER     | GET    | /user/{{id}} | get a specific user details |
 | CREATE_USER  | POST   | /user/{{id}} | create a user (email, forename, surname) |
 | UPDATE_USER  | PUT    | /user/{{id}} | update a user (email, forename, surname) |
-| DELETE_USER  | DELETE | /user{{id}}  | delete a user |
+| DELETE_USER  | DELETE | /user/{{id}} | delete a user |
 
 
 Improvements
@@ -40,7 +40,7 @@ Improvements
 * put allows new fields to be added
 * validate email field
 * exception handling could be improved 
-** use of specific error types not just error (not good)
-** catching everything and treating them all the same (not good)
+    * use of specific error types not just error (not good)
+    * catching everything and treating them all the same (not good)
 * incorporate eslint into build
 
