@@ -14,6 +14,13 @@ Build tasks
 
 npm test - to run the tests
 npm start - to run the web server on port 8055
+
+
+Running docker
+--------------
+
+Pull the image 
+
   
 Postman
 -------
