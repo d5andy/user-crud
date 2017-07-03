@@ -12,15 +12,25 @@ A simple API to update to manage user details
 Build tasks
 -----------
 
-npm test - to run the tests
+npm i - install dependencies
+npm test - to run the tests (Jasmine specs)
 npm start - to run the web server on port 8055
 
 
 Running docker
 --------------
 
-Pull the image 
+Pull the image from "d5andy/user-crud:2"
+```
+docker pull d5andy/user-crud:2
+```
 
+Run the container opening port 8055 on 1234
+```
+docker run -p 1234:8055 d5andy/user-crud:2
+```
+
+See Postman for usage.
   
 Postman
 -------
