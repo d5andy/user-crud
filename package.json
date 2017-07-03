@@ -8,6 +8,7 @@
     "start": "node src/public/index.js"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "4.15.3",
     "lokijs": "^1.5.0",
     "request": "^2.81.0"

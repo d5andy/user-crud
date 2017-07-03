@@ -12,7 +12,7 @@ function randomUuid() {
 const 
     create = (email, forename, surname) => {
         if ([email, forename, surname].some(v => !v))  {    
-            throw new Error('Create user failed: Missing values')
+            throw new Error(`Create user failed: Missing values ${[email, forename, surname]}`)
         }
 
         return users.insert({id: randomUuid(), email: email, forename: forename, surname: surname, created: new Date()});

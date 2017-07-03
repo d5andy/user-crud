@@ -38,12 +38,12 @@ describe('userSpec.create::', ()=> {
 
     it('create_dup_email', ()=> {
         let duplicateUser = () => {user.create(email, 'forename', 'surname')};
-        expect(duplicateUser).toThrow();
+        expect(duplicateUser).toThrowError('Duplicate key for property email: myemail@gmail.com');
     });
 
     it('create_null_user', ()=> {
         let emptyUser = () => {user.create(null, 'forename', 'surname')};
-        expect(emptyUser).toThrow();
+        expect(emptyUser).toThrowError('Create user failed: Missing values ,forename,surname');
     });
 
 });
@@ -61,10 +61,8 @@ describe('UserSpec.update::', ()=> {
 
 
     it('update_null', ()=> {
-        it('update a user', ()=> {
-            let updateNulluser = () => {user.update({id: 'null', email: nullemail, forename: 'first'})};
-            expect(updateNulluser).toThrow();
-        });
+        let updateNulluser = () => {user.update({id: 'null', email: nullemail, forename: 'first'})};
+        expect(updateNulluser).toThrowError('Update failed no user null.email@gmail.com');
     });
 
 });
@@ -80,7 +78,7 @@ describe('UserSpec.delete::', ()=> {
 
     it('remove_null', ()=> {
         let deleteUser = () => {user.deleteByEmail(nullemail)};
-        expect(deleteUser).toThrow();
+        expect(deleteUser).toThrowError('Delete failed no user null.email@gmail.com');
     });
 
 });

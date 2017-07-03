@@ -10,30 +10,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.route('/user/:userId')
     .get((req, res) => {
-        let foundUser = user.findById(req.param('userId'));
+        let foundUser = user.findById(req.params.userId);
         if (foundUser) {
             res.json(foundUser);
         } else {
-            res.send(204);
+            res.sendStatus(204);
         }
     })
     .put((req, res) => {
         try {
-            let userUpdate = Object.assign(req.body, {id: req.param('userId')});
+            let userUpdate = Object.assign(req.body, {id: req.params.userId});
             res.json(user.update(userUpdate));
         } catch (err) {
             console.log(err);
-            res.send(404);
+            res.sendStatus(404);
         }
     })
     .delete((req, res) => {
         try {
-            var userId = req.param('userId');
-            console.log(`DELETE ${userId}`);
+            var userId = req.params.userId;
             res.json(user.deleteById(userId), 204);
         } catch (err) {
             console.log(err);
-            res.send(404);
+            res.sendStatus(404);
         }
     });
 
@@ -45,7 +44,7 @@ app.route('/user')
             res.status(201).json(newuser);
         } catch (err) {
             console.log(err);
-            res.send(400)
+            res.sendStatus(400)
         }
 
 
@@ -55,7 +54,7 @@ app.route('/user')
         if (all && all.length != 0) {
             res.json(all);
         } else {
-            res.status(204).json({});
+            res.sendStatus(204);
         }
     });
 
